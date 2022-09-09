@@ -24,3 +24,36 @@ function Home(){
      
       
             </div>
+            {data 
+
+         
+         
+&& <div>
+    
+    {data
+    
+    .filter((item) =>{
+        if (search === ""){
+            return item;
+        }
+        else if(item.name.toLowerCase().includes(search.toLowerCase())){
+            return item;
+        }
+    })
+    
+    .map(item=>(
+
+        <div className="product" key={item.id}>
+            
+        <img src={item.image_url}/> 
+        
+        <h3 className="header1"> {item.name} </h3>
+        <h4 className="header2">{item.category}</h4>
+        <p className="header3"> {item.instructions} </p>
+        {/* <button className="btn btn-primary button" onClick={handleClick(item.id)}> 
+        {order[item.id] ? ' Remove Order': 'Order'}
+        
+        </button> */}
+
+ </div>
+
