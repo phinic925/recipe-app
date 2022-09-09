@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
     return(
-        <header className='header4'>
+        <div className='header4'>
         
         <nav>
             <ul>
@@ -11,7 +12,7 @@ function Navbar() {
                <li> <Link to='/recipe'> Add Recipe </Link></li>
             </ul>
         </nav>
-    </header>
+    </div>
     )
     
 }

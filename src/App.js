@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import Home from './components/Home';
 import "bootstrap/dist/css/bootstrap.css"
@@ -24,7 +24,7 @@ function App() {
   return (
    
     <Router>
-    <div className="container">
+    <div >
      <Navbar/>
      <Routes>
      <Route exact path='/about' element={<About />}></Route>
