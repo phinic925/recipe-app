@@ -52,6 +52,7 @@ body{
   margin: 0px;
   padding: 0px;
   border: 0px;
+  box-sizing: border-box;
 }
 form input{
   padding: 15px;
@@ -97,7 +98,7 @@ img{
   width: 100%;
   border-top-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
-  display: block;
+  /* display: block; */
 }
 .image{
   position: relative;
@@ -108,9 +109,10 @@ img{
 .product{
  
    padding: 2rem 0;
-   margin: 0 auto;
-   width: 70vw;
- 
+   /* margin: 0 auto; */
+   /* width: 70vw;
+  */
+  width: 100%;
 }
 
 .item{
@@ -118,9 +120,9 @@ img{
   border-radius: 0.8rem;
   background-color: rgb(37, 37, 37);
 
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .product{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -144,7 +146,7 @@ img{
   
   }
   
-}
+} */
 .close-btn{
   position: absolute;
   display: block;

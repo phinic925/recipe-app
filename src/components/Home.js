@@ -4,6 +4,8 @@ function Home(){
 
     const[search,setSearch] = useState("");
     const[data] = useFetch("http://localhost:9292/recipes")
+    const[toggle,setToggle]= useState(true)
+      
     return (
         <>
         <h1 className="heading"> Make Food! </h1>
@@ -42,8 +44,10 @@ function Home(){
     })
     
     .map(item=>(
-
-        <div className="product" key={item.id}>
+        
+       
+        
+        <div className="col-md-3" key={item.id}>
          <div className="item"> 
          <div className="image">  
         <img src={item.image_url}/> 
@@ -58,17 +62,20 @@ function Home(){
         </div>
         <div>
         <h5 className="header3"> instruction 
-        <span>
-            <i className="fas fa-caret-square-down"/>
+        <span key={item.id}  onClick={() => setToggle(!toggle)}>
+            <i className="fas fa-caret-square-down" />
         </span>
             </h5>
-            {/* <p className="para1"> {item.instructions}</p> */}
-        </div>
-        </div>
+            {toggle &&  (<p className="para1"> {item.instructions}</p>)}
+           
+      </div>
+      </div>
+       
         {/* <button className="btn btn-primary button" onClick={handleClick(item.id)}> 
         {order[item.id] ? ' Remove Order': 'Order'}
         
         </button> */}
+     
 
  </div>
 
