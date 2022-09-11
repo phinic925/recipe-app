@@ -10,11 +10,7 @@
 }
 .header4 ul {
   list-style: none;
-  /* margin-left: 90px;
-  padding: 80px;
-  display: flex;
-  margin-right: 30px; */
-  padding: 0.5rem 1rem;
+ padding: 0.5rem 1rem;
   align-self: center;
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -106,6 +102,9 @@ img{
 .image{
   position: relative;
 }
+.para1{
+  color: white;
+}
 .product{
  
    padding: 2rem 0;
@@ -133,7 +132,7 @@ img{
 @media screen and (min-width: 992px) {
   .product{
    width: 85vw;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
   
   }
   
@@ -141,9 +140,18 @@ img{
 @media screen and (min-width: 1140px) {
   .product{
    
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
   
   }
+  
+}
+.close-btn{
+  position: absolute;
+  display: block;
+  top: 5%;
+  right: 5%;
+  color: blueviolet;
+  font-size: 2rem;
   
 }
 

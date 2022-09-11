@@ -47,16 +47,23 @@ function Home(){
          <div className="item"> 
          <div className="image">  
         <img src={item.image_url}/> 
+        <span className="close-btn">
+            <i className="fas fa-window-close"/>
+        </span>
         </div>
         <div>
         <h3 className="header1"> {item.name} </h3>
-        </div>
-        <div>
+        
         <h4 className="header2">{item.category}</h4>
         </div>
-        {/* <div>
-        <p className="header3"> {item.instructions} </p>
-        </div> */}
+        <div>
+        <h5 className="header3"> instruction 
+        <span>
+            <i className="fas fa-caret-square-down"/>
+        </span>
+            </h5>
+            <p className="para1"> {item.instructions}</p>
+        </div>
         </div>
         {/* <button className="btn btn-primary button" onClick={handleClick(item.id)}> 
         {order[item.id] ? ' Remove Order': 'Order'}
