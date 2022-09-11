@@ -154,4 +154,9 @@ img{
   font-size: 2rem;
   
 }
+.header3 span{
+  margin-left: 20px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
 

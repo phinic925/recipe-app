@@ -62,7 +62,7 @@ function Home(){
             <i className="fas fa-caret-square-down"/>
         </span>
             </h5>
-            <p className="para1"> {item.instructions}</p>
+            {/* <p className="para1"> {item.instructions}</p> */}
         </div>
         </div>
         {/* <button className="btn btn-primary button" onClick={handleClick(item.id)}> 
