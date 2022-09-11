@@ -4,17 +4,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: green;
+  /* background-color: green; */
   padding: 0 20%;
   /* margin-left: 300px; */
 }
 .header4 ul {
   list-style: none;
-  margin-left: 90px;
+  /* margin-left: 90px;
   padding: 80px;
   display: flex;
-  margin-right: 30px;
-  align-items: baseline;
+  margin-right: 30px; */
+  align-self: center;
+  
 }
 
 .header4 li {
@@ -94,21 +95,52 @@ form{
 
 }
 img{
-  margin-top: 20px;
-    width: 350px;
-    height: 250px;
-    border-radius: 8px;
-    
+  width: 100%;
+  border-top-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  display: block;
+}
+.image{
+  position: relative;
 }
 .product{
-  border-radius: 10px;
-  box-shadow: 0px 5px 20px rgb(75, 71, 71);
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background: black;
-  align-items: center;
-
-
+ 
+   padding: 2rem 0;
+   margin: 0 auto;
+   width: 70vw;
+ 
 }
+
+.item{
+ 
+  border-radius: 0.8rem;
+  background-color: rgb(37, 37, 37);
+
+  margin: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .product{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5rem; 
+   
+  }
+  
+}
+@media screen and (min-width: 992px) {
+  .product{
+   width: 85vw;
+    grid-template-columns: 1fr 1fr 1fr;
+  
+  }
+  
+}
+@media screen and (min-width: 1140px) {
+  .product{
+   
+    grid-template-columns: repeat(4,1fr);
+  
+  }
+  
+}
+

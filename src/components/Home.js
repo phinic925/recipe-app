@@ -44,12 +44,20 @@ function Home(){
     .map(item=>(
 
         <div className="product" key={item.id}>
-            
+         <div className="item"> 
+         <div className="image">  
         <img src={item.image_url}/> 
-        
+        </div>
+        <div>
         <h3 className="header1"> {item.name} </h3>
+        </div>
+        <div>
         <h4 className="header2">{item.category}</h4>
+        </div>
+        {/* <div>
         <p className="header3"> {item.instructions} </p>
+        </div> */}
+        </div>
         {/* <button className="btn btn-primary button" onClick={handleClick(item.id)}> 
         {order[item.id] ? ' Remove Order': 'Order'}
         
