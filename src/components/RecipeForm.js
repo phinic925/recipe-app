@@ -1,33 +1,33 @@
 import React from "react";
 
 function RecipeForm(){
-    // const[name,setName] = useState("");
-    // const[image,setImage_url] = useState("");
-    // const[description,setDescription] = useState("");
-    // const[category,setCategory] = useState("");
+    const[name,setName] = useState("");
+    const[image,setImage_url] = useState("");
+    const[instruction,setInstruction] = useState("");
+    const[category,setCategory] = useState("");
   
-//     function handleSubmit(e){
-//       e.preventDefault();
-//       const itemData = {
-//         name: name,
-//         image_url: image,
-//         description: description,
-//         category: category,
+    function handleSubmit(e){
+      e.preventDefault();
+      const itemData = {
+        name: name,
+        image_url: image,
+        category: category,
+        instructions: instruction
   
-//       };
-//       fetch("http://localhost:3000/products",{
-//         method: "POST",
-//         headers:{"Content-Type": "application/json"},
-//         body:JSON.stringify(itemData),
-//       })
-//       .then(res=> res.json())
-//     .then(data=>{
-//       console.log(data)
-//     })
-// }
-//    function handleImage(e){
-//        setImage_url((e.target.value))
-//    }
+      };
+      fetch("http://localhost:3000/recipes",{
+        method: "POST",
+        headers:{"Content-Type": "application/json"},
+        body:JSON.stringify(itemData),
+      })
+      .then(res=> res.json())
+    .then(data=>{
+      console.log(data)
+    })
+}
+   function handleImage(e){
+       setImage_url((e.target.value))
+   }
     return(
         <form className="form-horizontal" >
            <div className="form-group">
