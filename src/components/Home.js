@@ -13,7 +13,7 @@ function Home(){
             <div className="input-group col-xs-4 search">
             <input
             type="text"
-            placeholder="Search Product"
+            placeholder="Search recipe"
             className="form-control"
             value={search}
             onChange={(e)=>setSearch(e.target.value) }
@@ -30,7 +30,7 @@ function Home(){
 
          
          
-&& <div className='row'>
+&& <div className='row '>
     
     {data
     
@@ -47,7 +47,7 @@ function Home(){
         
        
         
-        <div className="col-md-4 mr-3 product" key={item.id}>
+        <div className="col-md-4 mr-3 " key={item.id}>
          <div className="item"> 
          <div className="image">  
         <img src={item.image_url}/> 
