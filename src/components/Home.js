@@ -1,10 +1,12 @@
 import React ,{useState} from 'react';
 import useFetch from './useFetch';
+import Review from './Review';
 function Home(){
 
     const[search,setSearch] = useState("");
     const[data] = useFetch("http://localhost:9292/recipes")
     const[toggle,setToggle]= useState(true)
+    const[review,setReview] = useState(true)
       
     return (
         <>
@@ -67,14 +69,13 @@ function Home(){
         </span>
             </h5>
             {toggle &&  (<p className="para1"> {item.instructions}</p>)}
-           
+            <button className="btn btn-primary button" onClick={() => setReview(!review)} > Review</button>
+            {/* {review &&  (<Review/>)} */}
       </div>
+     
       </div>
        
-        {/* <button className="btn btn-primary button" onClick={handleClick(item.id)}> 
-        {order[item.id] ? ' Remove Order': 'Order'}
         
-        </button> */}
      
 
  </div>
