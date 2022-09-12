@@ -30,7 +30,7 @@ function Home(){
 
          
          
-&& <div>
+&& <div className='row'>
     
     {data
     
@@ -47,7 +47,7 @@ function Home(){
         
        
         
-        <div className="col-md-3" key={item.id}>
+        <div className="col-md-4 mr-3 product" key={item.id}>
          <div className="item"> 
          <div className="image">  
         <img src={item.image_url}/> 
