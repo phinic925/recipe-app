@@ -1,27 +1,28 @@
 import React,{useState,useEffect} from 'react';
 
 function Review(){
-    const [data, setData] = useState(null);
+    const [review, setReview] = useState([]);
     useEffect(()=>{
-        fetch("`http://localhost:9292/reviews")
+        fetch("http://localhost:9292/reviews")
         .then(res=> res.json())
-        .then(data=> setData(data))
+        .then(data=> setReview(data))
 
     })
-   const reviews = data.map(review =>{
-       return(
-       <div key={review.id}>
-           <p> {review.description} </p>
-       </div>
-
-       )   
-   }) 
+   
  return(
         <>
-       {reviews}
-       <div>
-           <input type="textarea" placeholder='Enter your review'/>
-       </div>
+        <div>
+            
+            {review.map((item) => (
+                <ul>
+                <p className="reviews"> {item.description} </p>
+                </ul>
+          ))}
+        </div>
+        
+
+      
+      
         </>
     )
 
