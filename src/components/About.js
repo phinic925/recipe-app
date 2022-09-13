@@ -3,7 +3,7 @@ import Review from './Review';
 function About(){
     return (
         <>
-         <Review/>
+         {/* <Review/> */}
         </>
     )
 }
